@@ -194,15 +194,15 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero % 2 === 0) 
+  if (numero > 0) 
   {
-    return `es positivo el ${numero}`
+    return 'Es positivo'
   }
-  else if (numero % 2 !== 0)
+  else if (numero < 0)
   {
-    return `es negativo el ${numero}`
+    return 'Es negativo'
   }
-  else if (num === 0)
+  else if (numero === 0)
   {
     return false;
   }
@@ -257,7 +257,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  convertirDolar=euro*1.20
+  convertirDolar=euro*1.2
   return convertirDolar
 }
 deEuroAdolar(50)
@@ -268,14 +268,12 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length > 1 || letra !== a,e,i,o,u) 
+  if (letra.length === 1) 
   {
-    return "Dato incorrecto"
-  }
-  else if (letra === a,e,i,o,u) 
-  {
+    if(letra==='a' || letra==='e' || letra==='i' || letra==='o' || letra==='u')
     return "Es vocal"
   }
+  return "Dato incorrecto"
 }
 esVocal('a')
 
