@@ -22,7 +22,7 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if (edad >18) {
+  if (edad >= 18) {
     return 'Allowed'
   }
   else
@@ -59,13 +59,13 @@ function saludo(idioma) {
   // Tu código:
   switch (idioma) {
     case 'aleman':
-      return 'Guten Tag'
+      return 'Guten Tag!'
       break;
     case 'mandarin':
-      return 'Ni Hao'
+      return 'Ni Hao!'
       break;
     case 'ingles':
-      return 'Hello'
+      return 'Hello!'
       break;
     default:
       return 'Hola!'
@@ -133,10 +133,10 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (num>0 && num<1) {
-    return false
+  if (Number.isInteger(numero)) {
+    return true
   }
-  else if (Math.floor(numero)) {
+  else{
     return true
   }
 }
@@ -165,7 +165,7 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1===0 || num2===0 || num3===0) {
-    return 'error'
+    return 'Error'
   }
   else if (num1<0 || num2<0 || num3<0) {
     return 'Hay negativos'
@@ -186,7 +186,17 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  for (let i = 2; i <= numero; i++) {
+    if (i%i===0 && i%1===1) {
+      return true
+    }
+    else
+    {
+      return false
+    }
+  }
 }
+esPrimo()
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
@@ -200,25 +210,39 @@ function esVerdadero(valor){
     return 'Soy verdadero'
   }
 }
-esVerdadero()
+esVerdadero('')
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí
+  var multiplicar = []
+  for (let i = 0; i <= 10; i++) {
+    multiplicar.push(i*6)
+  }
+  return multiplicar  
 }
-
+tablaDelSeis()
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  if (numero >= 100 && numero <=999) {
+    return true
+  }
+  return false
 }
-
+tieneTresDigitos(999)
 function doWhile(numero) {
-  //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
+  //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 vece
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var i= 0
+  do {
+    numero = numero + 5;
+    i=i+1
+  } while (i<8);
+  return numero
 }
+doWhile(5)
 
 
 // No modificar nada debajo de esta línea
