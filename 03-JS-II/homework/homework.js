@@ -137,7 +137,7 @@ function esEntero(numero) {
     return true
   }
   else{
-    return true
+    return false
   }
 }
 esEntero()
@@ -154,6 +154,9 @@ function fizzBuzz(numero) {
   }  
   else if (numero%3===0) {
     return 'fizz'
+  }
+  else{
+    return numero
   }
 }
 fizzBuzz(15)
@@ -176,31 +179,32 @@ function operadoresLogicos(num1, num2, num3) {
     }
     else if (num3>num1 && num3>num2) {
       return num3 + 1
-    } 
+    }
     else 
     {
       return false
     }
-  } 
+  }
 }
-operadoresLogicos(5,9,7)
+operadoresLogicos(5,9,11)
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  for (let i = 2; i <= numero; i++) {
-    if (i%i===0 && i%1===1) {
-      return true
-    }
-    else
-    {
+  if(numero === 0 || numero === 1)
       return false
+  
+  for (let i=2; i<numero; i++)
+    {
+      if(numero % i === 0 )
+        return false
     }
-  }
+
+  return true
 }
-esPrimo()
+esPrimo(100)
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
