@@ -79,16 +79,10 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  objeto['propiedad']=propiedad
-  for (let clave in objeto){
-  if(clave === objeto[clave])
-  {
-    return true
-  } 
-  else
-  {
-    return false
-  }
+  if(objeto[propiedad]) {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -97,15 +91,7 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
-  usuario['propiedad']= password
-  for(let clave in usuario)
-    {
-      if(clave === usuario[clave])
-        {
-          return true
-        }
-      return false
-    }
+  return usuario['password'] === password
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
@@ -163,7 +149,10 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  producto['calcularPrecioDescuento']= function () {
+    return this.precio - (this.precio * this.porcentajeDeDescuento)
+  }
+  return producto
 }
 
 // No modificar nada debajo de esta línea
