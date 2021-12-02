@@ -1,0 +1,19 @@
+## Instrucciones
+---
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+	* Variables
+	* Strings
+	* Funciones (argumentos, `return`)
+	* Declaraciones `if`
+	* Valores booleanos (`true`, `false`)
+
+- VARIABLES: una variable es una pequeña caja donde se guardara un tipo de dato en especifico, 
+por lo cual cada caja es única.
+- STRING: es un tipo de dato que solo especifica puro texto.
+- FUNCIONES: son un tipo de objetos que nos permiten guardar cierta informacion, para luego utilizarlo y no
+estar repitiendo lo mismo varias veces. Ademas, que nos permite guardar usar sus parametros para desarrollar
+el contenido que hay dentro de la funcion. El return, es la parte esencial de una funcion, porque sera el medio
+por donde salga el resultado.
+- IF: es una condicion que nos permite condicionar datos para que nos genere un resultado en especifico, estos
+pueden ser n condiciones.
